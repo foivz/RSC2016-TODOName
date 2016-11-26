@@ -24,4 +24,12 @@ Route::get('/callbackGoogle', 'SocialAuthControllerGoogle@callback');
 Route::get('/home', 'HomeController@index')
     ->name('home');
 
+Route::get('/admin', 'AdminLogin@index');
+
+Route::post('/admin/login', 'AdminLogin@preLogin');
+Route::get('/logout', 'AdminLogin@getLogout');
+
+
 Route::resource('register', 'registerController');
+Route::resource('admin-panel', 'adminPanelController');
+Route::resource('quiz-administration', 'QuizAdministrationController');

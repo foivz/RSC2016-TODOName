@@ -21,7 +21,8 @@ class SocialAuthControllerFacebook extends Controller
         $user = $service->createOrGetUser(Socialite::driver('facebook')->user());
 
         auth()->login($user);
-
+        if($user['name'] == 'matija')
+            return redirect()->to('admin-panel');
         return redirect()->to('/register');
     }
 }
