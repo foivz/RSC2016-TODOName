@@ -68,7 +68,7 @@
                             </div>
                         </div>-->
                            {{ csrf_field() }}
-                           <a href="redirect" class="btn btn-primary">
+                           <a href="redirectFacebook" class="btn btn-primary">
                            Facebook register
                            </a>
                     </form>

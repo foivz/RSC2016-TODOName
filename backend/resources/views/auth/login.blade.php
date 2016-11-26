@@ -8,7 +8,7 @@
                 <div class="panel-heading">Login</div>
                 <div class="panel-body">
                         {{ csrf_field() }}
-                        <a href="redirect" class="btn btn-primary">
+                        <a href="redirectFacebook" class="btn btn-primary">
                             Facebook login
                         </a>
                 </div>
