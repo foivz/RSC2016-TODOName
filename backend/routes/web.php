@@ -23,3 +23,5 @@ Route::get('/redirectGoogle', 'SocialAuthControllerGoogle@redirect');
 Route::get('/callbackGoogle', 'SocialAuthControllerGoogle@callback');
 Route::get('/home', 'HomeController@index')
     ->name('home');
+
+Route::resource('register', 'registerController');
