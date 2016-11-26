@@ -9,7 +9,8 @@
         "laravel/framework": "5.3.*",
         "laravel/socialite": "^2.0",
         "appzcoder/crud-generator": "^1.2",
-        "laravelcollective/html": "^5.3"
+        "laravelcollective/html": "^5.3",
+        "chrisbjr/api-guard": "3.1.*"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

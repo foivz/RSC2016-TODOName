@@ -140,6 +140,8 @@ return [
         /*
          * Laravel Framework Service Providers...
          */
+
+        Chrisbjr\ApiGuard\Providers\ApiGuardServiceProvider::class,
         Illuminate\Auth\AuthServiceProvider::class,
         Appzcoder\CrudGenerator\CrudGeneratorServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
@@ -195,6 +197,7 @@ return [
     */
 
     'aliases' => [
+        'ApiGuardAuth' => \Chrisbjr\ApiGuard\Facades\ApiGuardAuth::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
         'App' => Illuminate\Support\Facades\App::class,
         'Artisan' => Illuminate\Support\Facades\Artisan::class,
