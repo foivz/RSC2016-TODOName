@@ -34,5 +34,10 @@ return [
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],
+    'facebook' => [
+        'client_id' => '1106843559433135',
+        'client_secret' => '23cb64cf489d64a9b7db8db8e18c2b3a',
+        'redirect' => 'http://rsc.app/callback',
+    ],
 
 ];
