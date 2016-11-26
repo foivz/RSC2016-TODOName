@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace quizzes\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
-use App\SocialAccountServiceFacebook;
+use quizzes\Http\Requests;
+use quizzes\Http\Controllers\Controller;
+use quizzes\SocialAccountServiceFacebook;
 use Socialite;
 
 class SocialAuthControllerFacebook extends Controller

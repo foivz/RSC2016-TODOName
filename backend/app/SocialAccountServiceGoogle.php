@@ -10,11 +10,11 @@ namespace quizzes;
 
 use Laravel\Socialite\Contracts\User as ProviderUser;
 
-class SocialAccountServiceFacebook
+class SocialAccountServiceGoogle
 {
     public function createOrGetUser(ProviderUser $providerUser)
     {
-        $account = SocialAccount::whereProvider('facebook')
+        $account = SocialAccount::whereProvider('google')
             ->whereProviderUserId($providerUser->getId())
             ->first();
 
@@ -24,7 +24,7 @@ class SocialAccountServiceFacebook
 
             $account = new SocialAccount([
                 'provider_user_id' => $providerUser->getId(),
-                'provider' => 'facebook'
+                'provider' => 'google'
             ]);
 
             $user = User::whereEmail($providerUser->getEmail())->first();

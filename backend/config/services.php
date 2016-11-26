@@ -30,7 +30,7 @@ return [
     ],
 
     'stripe' => [
-        'model' => App\User::class,
+        'model' => quizzes\User::class,
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],
@@ -38,6 +38,11 @@ return [
         'client_id' => '1106843559433135',
         'client_secret' => '23cb64cf489d64a9b7db8db8e18c2b3a',
         'redirect' => 'http://rsc.app/callbackFacebook',
+    ],
+    'google' => [
+        'client_id' => '1029954208315-vkhucpt5tsel2v8epf7bus409c3h0gg2.apps.googleusercontent.com',
+        'client_secret' => '4OSo0Oj47fibfXVYm5DkSu3h',
+        'redirect' => 'http://rsc.app/callbackGoogle',
     ],
 
 ];
