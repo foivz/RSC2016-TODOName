@@ -15,17 +15,16 @@
                             <table class="table table-borderless">
                                 <thead>
                                     <tr>
-                                        <th>Team name</th><th>Actions</th>
+                                        <th>Team name</th><th>Quiz category</th><th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($register as $item)
                                     <tr>
                                         <td>{{ $item->teamName }}</td>
-                                        
+                                        <td>{{ $item->quizCategory }}</td>
                                         <td>
-                                            <a href="{{ url('/register/' . $item->id) }}" class="btn btn-success btn-xs" title="View register"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"/></a>
-                                            <a href="{{ url('/register/' . $item->id . '/edit') }}" class="btn btn-primary btn-xs" title="Edit register"><span class="glyphicon glyphicon-pencil" aria-hidden="true"/></a>
+
                                             {!! Form::open([
                                                 'method'=>'DELETE',
                                                 'url' => ['/register', $item->id],

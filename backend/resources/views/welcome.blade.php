@@ -72,7 +72,7 @@
 
                 @if (Route::has('login'))
                         @if (Auth::check())
-                            <a href="{{ url('/home') }}" class="btn btn-primary">Home</a>
+                            <a href="{{ url('/register') }}" class="btn btn-primary">Home</a>
                         @else
                             <a href="redirectFacebook" class="btn btn-primary">Login with Facebok</a>
                             <a href="redirectGoogle" class="btn btn-primary">Login with Google</a>

@@ -22,6 +22,6 @@ class SocialAuthControllerGoogle extends Controller
 
         auth()->login($user);
 
-        return redirect()->route('home');
+        return redirect()->to('/register');
     }
 }
