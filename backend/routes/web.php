@@ -39,3 +39,4 @@ Route::resource('register', 'registerController');
 Route::resource('admin-panel', 'adminPanelController');
 Route::resource('quiz-administration', 'QuizAdministrationController');
 Route::resource('quiz-questions', 'QuizQuestionsController');
+Route::resource('user-administration', 'UserAdministrationController');

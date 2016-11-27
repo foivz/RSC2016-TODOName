@@ -23,12 +23,12 @@
                                         <td>Opis</td>
                                     </tr>
                                     <tr>
-                                        <td><a>Team administration</a></td>
+                                        <td><a href="register">Team administration</a></td>
                                         <td>Opis</td>
 
                                     </tr>
                                     <tr>
-                                        <td><a>User administration</a></td>
+                                        <td><a href="user-administration">User administration</a></td>
                                         <td>Opis</td>
 
                                     </tr>
