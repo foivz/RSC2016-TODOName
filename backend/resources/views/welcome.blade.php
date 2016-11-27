@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Quizzes</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -44,51 +44,40 @@
             .content {
                 text-align: center;
             }
+            a{
+                text-decoration: none;
+                font-size: 30px;
+                background: #dedede;
 
+
+            }
             .title {
                 font-size: 84px;
             }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
             .m-b-md {
                 margin-bottom: 30px;
             }
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @if (Auth::check())
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
-                    @endif
-                </div>
-            @endif
+    @extends('layouts.app')
+
+    <div class="flex-center position-ref full-height">
+
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Quizzes
                 </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+                @if (Route::has('login'))
+                        @if (Auth::check())
+                            <a href="{{ url('/register') }}" class="btn btn-primary">Home</a>
+                        @else
+                            <a href="redirectFacebook" class="btn btn-primary">Login with Facebok</a>
+                            <a href="redirectGoogle" class="btn btn-primary">Login with Google</a>
+                    @endif
+                @endif
             </div>
         </div>
     </body>

@@ -1,5 +1,10 @@
 <?php
-
+/* API */
+Route::group(["namespace" => "Api", "prefix" => "api"], function() {
+    Route::get('quizes', 'QuizController@listAll');
+    Route::get('teams', 'TeamsController@listAll');
+    Route::get('events', 'EventsController@listAll');
+});
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,7 +21,20 @@ Route::get('/', function () {
 });
 Auth::routes();
 
-Route::get('/redirect', 'SocialAuthController@redirect');
-Route::get('/callback', 'SocialAuthController@callback');
+Route::get('/redirectFacebook', 'SocialAuthControllerFacebook@redirect');
+Route::get('/callbackFacebook', 'SocialAuthControllerFacebook@callback');
+
+Route::get('/redirectGoogle', 'SocialAuthControllerGoogle@redirect');
+Route::get('/callbackGoogle', 'SocialAuthControllerGoogle@callback');
 Route::get('/home', 'HomeController@index')
     ->name('home');
+
+Route::get('/admin', 'AdminLogin@index');
+
+Route::post('/admin/login', 'AdminLogin@preLogin');
+Route::get('/logout', 'AdminLogin@getLogout');
+
+
+Route::resource('register', 'registerController');
+Route::resource('admin-panel', 'adminPanelController');
+Route::resource('quiz-administration', 'QuizAdministrationController');
