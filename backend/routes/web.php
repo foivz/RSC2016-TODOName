@@ -1,5 +1,10 @@
 <?php
-
+/* API */
+Route::group(["namespace" => "Api", "prefix" => "api"], function() {
+    Route::get('quizes', 'QuizController@listAll');
+    Route::get('teams', 'TeamsController@listAll');
+    Route::get('events', 'EventsController@listAll');
+});
 /*
 |--------------------------------------------------------------------------
 | Web Routes

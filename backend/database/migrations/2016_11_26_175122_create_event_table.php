@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSocialAccountsTable extends Migration
+class CreateEventTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,14 @@ class CreateSocialAccountsTable extends Migration
      */
     public function up()
     {
-        Schema::create('social_accounts', function (Blueprint $table) {
-            $table->integer('user_id');
-            $table->integer('usert_id')->references('user_id')->on('teams');
-            $table->string('provider_user_id');
-            $table->string('provider');
+        Schema::create('events', function(Blueprint $table)
+        {
+            $table->increments('id');
+            $table->string('name', 30);
+            $table->text('description');
+            $table->text('moderator');
+            $table->integer('prizes');
+            $table->text('rules');
             $table->timestamps();
         });
     }
@@ -29,6 +32,6 @@ class CreateSocialAccountsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('social_accounts');
+        Schema::drop('events');
     }
 }

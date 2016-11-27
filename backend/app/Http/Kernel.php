@@ -52,5 +52,6 @@ class Kernel extends HttpKernel
         'can' => \Illuminate\Auth\Middleware\Authorize::class,
         'guest' => \quizzes\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
+        'apiguard' => \Chrisbjr\ApiGuard\Http\Middleware\ApiGuard::class,
     ];
 }

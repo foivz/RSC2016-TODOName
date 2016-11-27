@@ -140,7 +140,7 @@ return [
         /*
          * Laravel Framework Service Providers...
          */
-        'Gbrock\Table\Providers\TableServiceProvider',
+        Chrisbjr\ApiGuard\Providers\ApiGuardServiceProvider::class,
         Illuminate\Auth\AuthServiceProvider::class,
         Appzcoder\CrudGenerator\CrudGeneratorServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
@@ -196,7 +196,7 @@ return [
     */
 
     'aliases' => [
-        'Table'      => 'Gbrock\Table\Facades\Table',
+        'ApiGuardAuth' => \Chrisbjr\ApiGuard\Facades\ApiGuardAuth::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
         'App' => Illuminate\Support\Facades\App::class,
         'Artisan' => Illuminate\Support\Facades\Artisan::class,

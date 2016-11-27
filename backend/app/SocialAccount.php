@@ -12,4 +12,7 @@ class SocialAccount extends Model
     {
         return $this->belongsTo(User::class);
     }
+    public function quizQuestion() {
+        return $this->belongsTo('quizzes\Teams');
+    }
 }
