@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace quizzes;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -11,5 +11,8 @@ class SocialAccount extends Model
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+    public function quizQuestion() {
+        return $this->belongsTo('quizzes\Teams');
     }
 }
