@@ -38,7 +38,7 @@ class QuizController extends BaseApiController {
 	 * )
 	 */
 	public function listAll() {
-		$quizes = QuizQuestion::all();
+		$teams = QuizQuestion::all();
 		/*$result = [];
 		foreach($quizes as $quiz) {
 			//$status = $quiz->getQuizStatus();
@@ -51,7 +51,9 @@ class QuizController extends BaseApiController {
 				//'passed' => $status['passed'],
 			]);
 		}*/
-		return $quizes->toJson();
+
+        $result = $teams->toJson();
+        return json_decode($result);
 	}
 
 } 

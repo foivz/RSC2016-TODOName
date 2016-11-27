@@ -38,7 +38,7 @@ class QuizQuestionChoice extends Model {
 
 	/*  RELATIONSHIPS */
 	public function quizQuestion() {
-		return $this->belongsTo('App\QuizQuestion');
+		return $this->belongsTo('quizzes\QuizQuestion');
 	}
 
 

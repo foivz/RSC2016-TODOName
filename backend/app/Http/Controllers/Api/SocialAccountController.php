@@ -3,10 +3,11 @@
 namespace quizzes\Http\Controllers\Api;
 
 use quizzes\Events;
+use quizzes\SocialAccount;
 use quizzes\API;
 use EllipseSynergie\ApiResponse\Contracts\Response;
 
-class EventsController extends BaseApiController {
+class SocialAccountController extends BaseApiController {
 
 
 
@@ -15,9 +16,10 @@ class EventsController extends BaseApiController {
     ];
 
     public function listAll() {
-        $teams = Events::all();
-        $result = $teams->toJson();
-        return json_decode($result);
+        $eventts = SocialAccount::all();
+        $events = json_decode($eventts);
+        return $events->toJson();
+
     }
 
 }

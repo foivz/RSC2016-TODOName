@@ -16,9 +16,8 @@ class TeamsController extends BaseApiController {
 
     public function listAll() {
         $teams = Teams::all();
-
-        return $teams->toJson();
-
+        $result = $teams->toJson();
+        return json_decode($result);
     }
 
 }

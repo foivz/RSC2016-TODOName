@@ -2,6 +2,7 @@
 namespace quizzes;
 
 use Illuminate\Database\Eloquent\Model;
+use quizzes\Http\Controllers\Api\SocialAccountController;
 
 class Teams extends Model{
     /**
@@ -16,7 +17,7 @@ class Teams extends Model{
      *
      * @var array
      */
-    protected $fillable = ['name', 'participants'];
+    protected $fillable = ['name', 'p1', 'p2', 'p3', 'p4'];
 
     /**
      * The attributes excluded from the model's JSON form.
@@ -24,4 +25,8 @@ class Teams extends Model{
      * @var array
      */
     protected $hidden = [];
+
+    public function choices() {
+        return $this->hasMany('quizzes\SocialAccount');
+    }
 }

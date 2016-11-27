@@ -28,7 +28,7 @@ class QuizQuestion extends Model {
 	/*  RELATIONSHIPS */
 
 	public function choices() {
-		return $this->hasMany('App\QuizQuestionChoice');
+		return $this->hasMany('quizzes\QuizQuestionChoice');
 	}
 
 
