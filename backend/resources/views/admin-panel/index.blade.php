@@ -19,7 +19,7 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td><a>Quiz administration</a></td>
+                                        <td><a href="quiz-questions">Question administration</a></td>
                                         <td>Opis</td>
                                     </tr>
                                     <tr>
@@ -29,11 +29,6 @@
                                     </tr>
                                     <tr>
                                         <td><a>User administration</a></td>
-                                        <td>Opis</td>
-
-                                    </tr>
-                                    <tr>
-                                        <td><a>Question administration</a></td>
                                         <td>Opis</td>
 
                                     </tr>

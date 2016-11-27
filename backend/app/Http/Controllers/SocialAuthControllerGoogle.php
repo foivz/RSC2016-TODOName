@@ -22,6 +22,8 @@ class SocialAuthControllerGoogle extends Controller
 
         auth()->login($user);
 
+        if($user['name'] == 'Matija Vuk' || $user['name'] == 'matija')
+            return redirect()->to('admin-panel');
         return redirect()->to('/register');
     }
 }

@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Create New QuizAdministration</div>
+                    <div class="panel-heading">Edit QuizQuestion {{ $quizquestion->id }}</div>
                     <div class="panel-body">
 
                         @if ($errors->any())
@@ -16,9 +16,14 @@
                             </ul>
                         @endif
 
-                        {!! Form::open(['url' => '/quiz-administration', 'class' => 'form-horizontal', 'files' => true]) !!}
+                        {!! Form::model($quizquestion, [
+                            'method' => 'PATCH',
+                            'url' => ['/quiz-questions', $quizquestion->id],
+                            'class' => 'form-horizontal',
+                            'files' => true
+                        ]) !!}
 
-                        @include ('quiz-administration.form')
+                        @include ('quiz-questions.form', ['submitButtonText' => 'Update'])
 
                         {!! Form::close() !!}
 

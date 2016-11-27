@@ -5,11 +5,11 @@ namespace quizzes\Http\Controllers;
 use quizzes\Http\Requests;
 use quizzes\Http\Controllers\Controller;
 
-use quizzes\QuizAdministration;
+use quizzes\QuizQuestion;
 use Illuminate\Http\Request;
 use Session;
 
-class QuizAdministrationController extends Controller
+class QuizQuestionsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,9 +18,9 @@ class QuizAdministrationController extends Controller
      */
     public function index()
     {
-        $quizadministration = QuizAdministration::paginate(25);
+        $quizquestions = QuizQuestion::paginate(25);
 
-        return view('quiz-administration.index', compact('quizadministration'));
+        return view('quiz-questions.index', compact('quizquestions'));
     }
 
     /**
@@ -30,7 +30,7 @@ class QuizAdministrationController extends Controller
      */
     public function create()
     {
-        return view('quiz-administration.create');
+        return view('quiz-questions.create');
     }
 
     /**
@@ -45,11 +45,11 @@ class QuizAdministrationController extends Controller
         
         $requestData = $request->all();
         
-        QuizAdministration::create($requestData);
+        QuizQuestion::create($requestData);
 
-        Session::flash('flash_message', 'QuizAdministration added!');
+        Session::flash('flash_message', 'QuizQuestion added!');
 
-        return redirect('quiz-administration');
+        return redirect('quiz-questions');
     }
 
     /**
@@ -61,9 +61,9 @@ class QuizAdministrationController extends Controller
      */
     public function show($id)
     {
-        $quizadministration = QuizAdministration::findOrFail($id);
+        $quizquestion = QuizQuestion::findOrFail($id);
 
-        return view('quiz-administration.show', compact('quizadministration'));
+        return view('quiz-questions.show', compact('quizquestion'));
     }
 
     /**
@@ -75,9 +75,9 @@ class QuizAdministrationController extends Controller
      */
     public function edit($id)
     {
-        $quizadministration = QuizAdministration::findOrFail($id);
+        $quizquestion = QuizQuestion::findOrFail($id);
 
-        return view('quiz-administration.edit', compact('quizadministration'));
+        return view('quiz-questions.edit', compact('quizquestion'));
     }
 
     /**
@@ -93,12 +93,12 @@ class QuizAdministrationController extends Controller
         
         $requestData = $request->all();
         
-        $quizadministration = QuizAdministration::findOrFail($id);
-        $quizadministration->update($requestData);
+        $quizquestion = QuizQuestion::findOrFail($id);
+        $quizquestion->update($requestData);
 
-        Session::flash('flash_message', 'QuizAdministration updated!');
+        Session::flash('flash_message', 'QuizQuestion updated!');
 
-        return redirect('quiz-administration');
+        return redirect('quiz-questions');
     }
 
     /**
@@ -110,10 +110,10 @@ class QuizAdministrationController extends Controller
      */
     public function destroy($id)
     {
-        QuizAdministration::destroy($id);
+        QuizQuestion::destroy($id);
 
-        Session::flash('flash_message', 'QuizAdministration deleted!');
+        Session::flash('flash_message', 'QuizQuestion deleted!');
 
-        return redirect('quiz-administration');
+        return redirect('quiz-questions');
     }
 }

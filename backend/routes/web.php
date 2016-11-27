@@ -33,3 +33,4 @@ Route::get('/logout', 'AdminLogin@getLogout');
 Route::resource('register', 'registerController');
 Route::resource('admin-panel', 'adminPanelController');
 Route::resource('quiz-administration', 'QuizAdministrationController');
+Route::resource('quiz-questions', 'QuizQuestionsController');

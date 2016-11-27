@@ -24,14 +24,14 @@
                                     {!! Form::text('teamName', null, ['class' => 'form-control']) !!}
                                     {!! $errors->first('teamName', '<p class="help-block">:message</p>') !!}
                                 </div>
-                            </div
+                            </div>
                             <div class="form-group {{ $errors->has('quizCategory') ? 'has-error' : ''}}">
                                 {!! Form::label('quizCategory', 'Quiz category: ', ['class' => 'col-sm-2 control-label']) !!}
                                 <div class="col-sm-8">
                                     {!! Form::text('quizCategory', null, ['class' => 'form-control']) !!}
                                     {!! $errors->first('quizCategory', '<p class="help-block">:message</p>') !!}
                                 </div>
-                            </div
+                            </div>
                             @include ('register.form')
 
                         {!! Form::close() !!}

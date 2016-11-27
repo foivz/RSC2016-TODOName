@@ -12,6 +12,9 @@
 
         <!-- Styles -->
         <style>
+            #app{
+                display: none;
+            }
             html, body {
                 background-color: #fff;
                 color: #636b6f;
@@ -21,8 +24,9 @@
                 margin: 0;
             }
 
-            .full-height {
-                height: 100vh;
+            header{
+                background-color: #2a88bd;
+                height: 50px;
             }
 
             .flex-center {
@@ -53,18 +57,20 @@
             }
             .title {
                 font-size: 84px;
+                padding-top: 10px;
             }
             .m-b-md {
                 margin-bottom: 30px;
             }
         </style>
     </head>
+    <header>
+
+    </header>
     <body>
     @extends('layouts.app')
 
     <div class="flex-center position-ref full-height">
-
-
             <div class="content">
                 <div class="title m-b-md">
                     Quizzes

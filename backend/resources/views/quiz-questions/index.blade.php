@@ -5,36 +5,37 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Quizadministration</div>
+                    <div class="panel-heading">Quizquestions</div>
                     <div class="panel-body">
 
-                        <a href="{{ url('/quiz-administration/create') }}" class="btn btn-primary btn-xs" title="Add New QuizAdministration"><span class="glyphicon glyphicon-plus" aria-hidden="true"/></a>
+                        <a href="{{ url('/quiz-questions/create') }}" class="btn btn-primary btn-xs" title="Add New QuizQuestion"><span class="glyphicon glyphicon-plus" aria-hidden="true"/></a>
                         <br/>
                         <br/>
                         <div class="table-responsive">
                             <table class="table table-borderless">
                                 <thead>
                                     <tr>
-                                        <th>ID</th><th>Actions</th>
+                                        <th>Questions</th><th>Category</th><th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($quizadministration as $item)
+                                @foreach($quizquestions as $item)
                                     <tr>
-                                        <td>{{ $item->id }}</td>
-                                        
+                                        <td>{{ $item->question }}</td>
+                                        <td>{{ $item->category }}</td>
+
                                         <td>
-                                            <a href="{{ url('/quiz-administration/' . $item->id) }}" class="btn btn-success btn-xs" title="View QuizAdministration"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"/></a>
-                                            <a href="{{ url('/quiz-administration/' . $item->id . '/edit') }}" class="btn btn-primary btn-xs" title="Edit QuizAdministration"><span class="glyphicon glyphicon-pencil" aria-hidden="true"/></a>
+                                            <a href="{{ url('/quiz-questions/' . $item->id) }}" class="btn btn-success btn-xs" title="View QuizQuestion"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"/></a>
+                                            <a href="{{ url('/quiz-questions/' . $item->id . '/edit') }}" class="btn btn-primary btn-xs" title="Edit QuizQuestion"><span class="glyphicon glyphicon-pencil" aria-hidden="true"/></a>
                                             {!! Form::open([
                                                 'method'=>'DELETE',
-                                                'url' => ['/quiz-administration', $item->id],
+                                                'url' => ['/quiz-questions', $item->id],
                                                 'style' => 'display:inline'
                                             ]) !!}
-                                                {!! Form::button('<span class="glyphicon glyphicon-trash" aria-hidden="true" title="Delete QuizAdministration" />', array(
+                                                {!! Form::button('<span class="glyphicon glyphicon-trash" aria-hidden="true" title="Delete QuizQuestion" />', array(
                                                         'type' => 'submit',
                                                         'class' => 'btn btn-danger btn-xs',
-                                                        'title' => 'Delete QuizAdministration',
+                                                        'title' => 'Delete QuizQuestion',
                                                         'onclick'=>'return confirm("Confirm delete?")'
                                                 )) !!}
                                             {!! Form::close() !!}
@@ -43,7 +44,7 @@
                                 @endforeach
                                 </tbody>
                             </table>
-                            <div class="pagination-wrapper"> {!! $quizadministration->render() !!} </div>
+                            <div class="pagination-wrapper"> {!! $quizquestions->render() !!} </div>
                         </div>
 
                     </div>

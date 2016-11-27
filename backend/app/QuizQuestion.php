@@ -4,14 +4,14 @@ namespace quizzes;
 
 use Illuminate\Database\Eloquent\Model;
 
-class QuizAdministration extends Model
+class QuizQuestion extends Model
 {
     /**
      * The database table used by the model.
      *
      * @var string
      */
-    protected $table = 'quiz_administrations';
+    protected $table = 'quiz_questions';
 
     /**
     * The database primary key value.
@@ -25,7 +25,7 @@ class QuizAdministration extends Model
      *
      * @var array
      */
-    protected $fillable = [''];
+    protected $fillable = ['question','category'];
 
     
 }
