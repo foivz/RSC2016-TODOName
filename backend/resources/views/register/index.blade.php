@@ -15,14 +15,14 @@
                             <table class="table table-borderless">
                                 <thead>
                                     <tr>
-                                        <th>Team name</th><th>Quiz category</th><th>Actions</th>
+                                        <th>Team name</th><th>User name</th><th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($register as $item)
                                     <tr>
                                         <td>{{ $item->teamName }}</td>
-                                        <td>{{ $item->quizCategory }}</td>
+                                        <td>{{ $item->userName }}</td>
                                         <td>
 
                                             {!! Form::open([

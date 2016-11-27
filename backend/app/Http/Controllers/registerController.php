@@ -18,7 +18,7 @@ class registerController extends Controller
      */
     public function index()
     {
-        $register = register::paginate(25);
+        $register = register::paginate(20);
 
         return view('register.index', compact('register'));
     }

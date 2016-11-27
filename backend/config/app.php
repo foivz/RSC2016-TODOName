@@ -140,6 +140,7 @@ return [
         /*
          * Laravel Framework Service Providers...
          */
+        'Gbrock\Table\Providers\TableServiceProvider',
         Illuminate\Auth\AuthServiceProvider::class,
         Appzcoder\CrudGenerator\CrudGeneratorServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
@@ -195,6 +196,7 @@ return [
     */
 
     'aliases' => [
+        'Table'      => 'Gbrock\Table\Facades\Table',
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
         'App' => Illuminate\Support\Facades\App::class,
         'Artisan' => Illuminate\Support\Facades\Artisan::class,

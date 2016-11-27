@@ -25,7 +25,7 @@ class register extends Model
      *
      * @var array
      */
-    protected $fillable = ['teamName', 'quizCategory'];
+    protected $fillable = ['teamName', 'userName'];
 
     
 }
