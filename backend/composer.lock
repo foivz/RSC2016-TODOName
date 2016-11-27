@@ -4,13 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-<<<<<<< HEAD
-    "hash": "581975a0cff808bd1efe002b437aee36",
-    "content-hash": "0b8e6dbd38e2e1c46c3510eebde845dc",
-=======
-    "hash": "2a5e96f3309cf865781ca08a3521cf3c",
-    "content-hash": "55883a1d4d4ab99cf07b7b4b98db38ec",
->>>>>>> e51402309da139d22c1e21ab43ba02b625feb9f0
+    "hash": "01505f58eddedeca40a18a16029160d5",
+    "content-hash": "a7a7d3c6babc39c28a8182668ec057ce",
     "packages": [
         {
             "name": "appzcoder/crud-generator",
@@ -273,32 +268,6 @@
             "time": "2015-11-06 14:35:42"
         },
         {
-<<<<<<< HEAD
-            "name": "gbrock/laravel-table",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/gbrock/laravel-table.git",
-                "reference": "6d09809838835f0872d774f43e4beec7f28a7f67"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/gbrock/laravel-table/zipball/6d09809838835f0872d774f43e4beec7f28a7f67",
-                "reference": "6d09809838835f0872d774f43e4beec7f28a7f67",
-                "shasum": ""
-            },
-            "require": {
-                "laravel/framework": "5.*",
-                "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "4.5.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Gbrock\\Table\\": "src/"
-=======
             "name": "ellipsesynergie/api-response",
             "version": "0.12.3",
             "source": {
@@ -331,7 +300,6 @@
                 "psr-4": {
                     "EllipseSynergie\\ApiResponse\\": "src",
                     "EllipseSynergie\\ApiResponse\\Tests\\": "tests"
->>>>>>> e51402309da139d22c1e21ab43ba02b625feb9f0
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -340,24 +308,6 @@
             ],
             "authors": [
                 {
-<<<<<<< HEAD
-                    "name": "Greg Brock",
-                    "email": "contact@gbrock.com",
-                    "homepage": "http://gbrock.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Table functionality for Laravel models",
-            "keywords": [
-                "filtering",
-                "html",
-                "laravel",
-                "model",
-                "sorting",
-                "table"
-            ],
-            "time": "2016-04-21 16:27:06"
-=======
                     "name": "Maxime Beaudoin",
                     "email": "maxime.beaudoin@ellipse-synergie.com",
                     "role": "Developer"
@@ -376,7 +326,56 @@
                 "json"
             ],
             "time": "2016-07-14 12:33:35"
->>>>>>> e51402309da139d22c1e21ab43ba02b625feb9f0
+        },
+        {
+            "name": "gbrock/laravel-table",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/gbrock/laravel-table.git",
+                "reference": "6d09809838835f0872d774f43e4beec7f28a7f67"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gbrock/laravel-table/zipball/6d09809838835f0872d774f43e4beec7f28a7f67",
+                "reference": "6d09809838835f0872d774f43e4beec7f28a7f67",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "5.*",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.5.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Gbrock\\Table\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Greg Brock",
+                    "email": "contact@gbrock.com",
+                    "homepage": "http://gbrock.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Table functionality for Laravel models",
+            "keywords": [
+                "filtering",
+                "html",
+                "laravel",
+                "model",
+                "sorting",
+                "table"
+            ],
+            "time": "2016-04-21 16:27:06"
         },
         {
             "name": "guzzlehttp/guzzle",

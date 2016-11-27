@@ -13,7 +13,6 @@ class CreateQuizTable extends Migration
             $table->increments('id');
             $table->text('question');
             $table->text('category');
-            $table->string('thumbnail', 50)->nullable();
             $table->timestamps();
         });
 
